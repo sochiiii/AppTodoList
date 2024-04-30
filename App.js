@@ -21,17 +21,17 @@ export default function App() {
  
   return (
     <View style={styles.contenedor}>
-      <Text style={styles.titulo}>Lista de Tareas</Text>
+      <Text style={styles.titulo}>Todo List</Text>
       <View style={styles.contenedorInput}>
         <TextInput
           style={styles.input}
           placeholderTextColor={'silver'}
-          placeholder="Ingrese una tarea"
+          placeholder="Add a task"
           value={textoTarea}
           onChangeText={texto => setTextoTarea(texto)}
         />
         <TouchableOpacity style={styles.botonAgregar} onPress={agregarTarea}>
-          <Text style={styles.textoBoton}>Agregar</Text>
+          <Text style={styles.textoBoton}>Add</Text>
         </TouchableOpacity>
       </View>
       <ScrollView style={styles.listaTareas}>
@@ -39,7 +39,7 @@ export default function App() {
           <View key={index} style={styles.contenedorTarea}>
             <Text style={styles.textoTarea}>{tarea}</Text>
             <TouchableOpacity style={styles.botonEliminar} onPress={() => eliminarTarea(index)}>
-              <Text style={styles.textoEliminar}>Eliminar</Text>
+              <Text style={styles.textoEliminar}>Delete</Text>
             </TouchableOpacity>
           </View>
         ))}
